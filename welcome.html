@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bluepay</title>
 
-  <link rel="stylesheet" href="css/welcom.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -17,28 +16,33 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #fff;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
+      background-color: #f9f9f9;
+      padding: 15px;
     }
 
     .top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 30px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .top img {
+      width: 40px;
+      height: 40px;
     }
 
     .box {
+      width: 100%;
       background-color: #001EFF;
       padding: 20px;
       color: white;
       border-radius: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     .box h2 {
@@ -46,24 +50,36 @@
     }
 
     .withdraw-btn {
-      display: inline-block;
       background-color: white;
       color: #001EFF;
       padding: 10px 20px;
       border-radius: 5px;
       font-weight: bold;
       text-decoration: none;
+      display: inline-block;
       margin: 10px 0;
     }
 
+    .rest {
+      width: 100%;
+    }
+
+    .firstc {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
     .circle {
-      width: 30%;
-      text-align: center;
-      padding: 10px;
-      border: 1px solid #ddd;
+      flex: 1 1 30%;
+      min-width: 100px;
+      background: white;
+      padding: 15px;
       border-radius: 10px;
-      background-color: #fff;
-      margin-bottom: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
     }
 
     .circle img {
@@ -74,17 +90,6 @@
 
     .circle h2 {
       font-size: 16px;
-    }
-
-    .firstc {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .rest {
-      margin-top: 20px;
     }
 
     a {
@@ -128,73 +133,72 @@
 
     @media (max-width: 768px) {
       .circle {
-        width: 45%;
+        flex: 1 1 45%;
       }
     }
 
     @media (max-width: 480px) {
       .circle {
-        width: 100%;
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="top">
-      <img src="images/ma.jpeg" alt="" width="40" height="40">
-      <p>Hi, Good!</p>
-      <img src="images/noti.jpeg" alt="" width="30" height="30">
-    </div>
 
-    <div class="box">
-      <p>Today Spent</p>
-      <h2>₦200,000.00</h2>
-      <a href="withdraw.html" class="withdraw-btn">Withdraw</a>
-      <p>Daily spend target: ₦ 200,000</p>
-    </div>
+  <div class="top">
+    <img src="images/ma.jpeg" alt="user">
+    <p>Hi, Valid user@!</p>
+    <img src="images/noti.jpeg" alt="noti">
+  </div>
 
-    <div class="rest">
-      <div class="firstc">
-        <div class="circle">
-          <h2>
-            <img src="images/reset.jpeg" alt="Reset"><br>
-            <a href="#" onclick="openPopup()">Reset</a>
-          </h2>
-        </div>
-        <div class="circle">
-          <h2>
-            <img src="images/buybpc.jpeg" alt="Buy BPC"><br>
-            <a href="pay.html">Buy BPC</a>
-          </h2>
-        </div>
-        <div class="circle">
-          <h2>
-            <img src="images/watch.jpeg" alt="Watch"><br>
-            <a href="video.html">Watch</a>
-          </h2>
-        </div>
+  <div class="box">
+    <p>Today Spent</p>
+    <h2>₦200,000.00</h2>
+    <a href="withdraw.html" class="withdraw-btn">Withdraw</a>
+    <p>Daily spend target: ₦200,000</p>
+  </div>
+
+  <div class="rest">
+    <div class="firstc">
+      <div class="circle">
+        <h2>
+          <img src="images/reset.jpeg" alt="Reset"><br>
+          <a href="#" onclick="openPopup()">Reset</a>
+        </h2>
       </div>
+      <div class="circle">
+        <h2>
+          <img src="images/buybpc.jpeg" alt="Buy BPC"><br>
+          <a href="pay.html">Buy BPC</a>
+        </h2>
+      </div>
+      <div class="circle">
+        <h2>
+          <img src="images/watch.jpeg" alt="Watch"><br>
+          <a href="video.html">Watch</a>
+        </h2>
+      </div>
+    </div>
 
-      <div class="firstc">
-        <div class="circle">
-          <h2>
-            <img src="images/contact.jpeg" alt="Contact"><br>
-            <a href="mailto:Bluepaycustormerservice25@gmail.com">Contact</a>
-          </h2>
-        </div>
-        <div class="circle">
-          <h2>
-            <img src="images/group.jpeg" alt="Group"><br>
-            <a href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17">Group</a>
-          </h2>
-        </div>
-        <div class="circle">
-          <h2>
-            <img src="images/faq.jpeg" alt="Faq"><br>
-            <a href="faq.html">Faq</a>
-          </h2>
-        </div>
+    <div class="firstc">
+      <div class="circle">
+        <h2>
+          <img src="images/contact.jpeg" alt="Contact"><br>
+          <a href="mailto:Bluepaycustormerservice25@gmail.com">Contact</a>
+        </h2>
+      </div>
+      <div class="circle">
+        <h2>
+          <img src="images/group.jpeg" alt="Group"><br>
+          <a href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17">Group</a>
+        </h2>
+      </div>
+      <div class="circle">
+        <h2>
+          <img src="images/faq.jpeg" alt="Faq"><br>
+          <a href="faq.html">Faq</a>
+        </h2>
       </div>
     </div>
   </div>
