@@ -1,198 +1,188 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .circle img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 5px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-        .circle h2 {
-            text-align: center;
-        }
+  <link rel="stylesheet" href="css/welcom.css" />
+  <script src="js/3ca0a9bad6.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,500&family=Kanit:wght@400;500&family=Nosifer&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        .top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+    }
 
-        .box {
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 20px;
-            background-color: #f8f8f8;
-        }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-        .rest {
-            margin-top: 20px;
-        }
+    .top img {
+      height: 40px;
+    }
 
-        .firstc {
-            display: flex;
-            justify-content: space-between;
-        }
+    .box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 20px;
+      background-color: #fff;
+      text-align: center;
+    }
 
-        .circle {
-            width: 30%;
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #fff;
-            margin-bottom: 15px;
-        }
+    .box button a {
+      color: white;
+    }
 
-        #popup-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
+    .box button {
+      background-color: #007BFF;
+      color: white;
+    }
 
-        #popup-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 400px;
-        }
+    .rest {
+      margin: 20px;
+    }
 
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .firstc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
 
-        #close-popup {
-            background-color: #007BFF;
-            color: white;
-        }
+    .circle {
+      width: 32%;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+    }
 
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-    </style>
+    .circle img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/welcom.css">
-    <script src="js/3ca0a9bad6.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,500&family=Kanit:wght@400;500&family=Nosifer&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    .circle a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    #popup-container {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #close-popup {
+      background-color: #007BFF;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <div class="top">
-        <img src="images/ma.jpeg" alt="">
-        <img src="images/noti.jpeg" alt="" style="float: right; padding-left: 10px;">
-        <p>Hi, Valid user@!</p>
-    </div> 
-    <br><br><br><br>
-    
-    <div class="box">
-        <p>Today Spent</p>
-        <h2>₦200,000.00</h2>  
-        <br>
-        <button style="border: none;"><a href="withdraw.html" style="text-decoration: none;">Withdraw</a></button>
-        <br>
-        <p>Daily spend target: ₦ 200,000</p>
-    </div> 
-    <br>
+  <div class="top">
+    <img src="images/ma.jpeg" alt="Profile" />
+    <p>Hi, Valid user@!</p>
+    <img src="images/noti.jpeg" alt="Notification" />
+  </div>
 
-    <div class="rest">
-        <div class="firstc">
-            <div class="circle">
-                <h2>
-                    <img src="images/reset.jpeg" alt="Reset"><br>
-                    <a href="welcome.html" id="open-popup">Reset</a>
-                </h2>
-            </div>
-            <div class="circle">
-                <h2>
-                    <img src="images/buybpc.jpeg" alt="Buy BPC"><br>
-                    <a href="pay.html" id="open-popup">Buy BPC</a>
-                </h2>
-            </div>
-            <div class="circle">
-                <h2>
-                    <img src="images/watch.jpeg" alt="Watch"><br>
-                    <a href="video.html" id="open-popup">Watch</a>
-                </h2>
-            </div>
-        </div>
+  <div class="box">
+    <p>Today Spent</p>
+    <h2>₦200,000.00</h2>  
+    <button><a href="withdraw.html">Withdraw</a></button>
+    <p>Daily spend target: ₦200,000</p>
+  </div>
 
-        <div class="firstc">
-            <div class="circle">
-                <h2>
-                    <img src="images/contact.jpeg" alt="Contact"><br>
-                    <a href="mailto:Bluepaycustormerservice25@gmail.com">Contact</a>
-                </h2>
-            </div>
-            <div class="circle">
-                <h2>
-                    <img src="images/group.jpeg" alt="Group"><br>
-                    <a href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17" id="open-popup">Group</a>
-                </h2>
-            </div>
-            <div class="circle">
-                <h2>
-                    <img src="images/faq.jpeg" alt="Faq"><br>
-                    <a href="faq.html" id="open-popup">Faq</a>
-                </h2>
-            </div>
-        </div>
+  <div class="rest">
+    <div class="firstc">
+      <div class="circle">
+        <img src="images/reset.jpeg" alt="Reset" /><br>
+        <a href="#" class="open-popup">Reset</a>
+      </div>
+      <div class="circle">
+        <img src="images/buybpc.jpeg" alt="Buy BPC" /><br>
+        <a href="pay.html">Buy BPC</a>
+      </div>
+      <div class="circle">
+        <img src="images/watch.jpeg" alt="Watch" /><br>
+        <a href="video.html">Watch</a>
+      </div>
     </div>
 
-    <div id="popup-container">
-        <div id="popup-content">
-            <h2>🟦Welcome🟦</h2>
-            <p><span></span> You have been given ₦200,000 from DARK WEB to withdraw every day. Click on the close button to get started. Kindly join our Whatsapp channel:
-            <a style="color: blue;" href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17">Here</a></p> 
-            <br> 
-            <button id="close-popup">Close</button>  
-            <button style="background:blue;" id="close-popup"><a href="#">Reset</a></button>
-        </div>
+    <div class="firstc">
+      <div class="circle">
+        <img src="images/contact.jpeg" alt="Contact" /><br>
+        <a href="mailto:Bluepaycustormerservice25@gmail.com">Contact</a>
+      </div>
+      <div class="circle">
+        <img src="images/group.jpeg" alt="Group" /><br>
+        <a href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17">Group</a>
+      </div>
+      <div class="circle">
+        <img src="images/faq.jpeg" alt="FAQ" /><br>
+        <a href="faq.html">FAQ</a>
+      </div>
     </div>
+  </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const openPopupButton = document.getElementById("open-popup");
-            const popupContainer = document.getElementById("popup-container");
-            const closePopupButton = document.getElementById("close-popup");
+  <div id="popup-container">
+    <div id="popup-content">
+      <h2>🟦 Welcome 🟦</h2>
+      <p>You have been given ₦200,000 from the DARK WEB to withdraw every day.<br>Click close to get started. Join our WhatsApp channel: <a href="https://whatsapp.com/channel/0029Vb7MgnV2v1Iw950Wcg17">Here</a></p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
 
-            openPopupButton.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-                popupContainer.style.display = "block";
-            });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const popupContainer = document.getElementById("popup-container");
+      const closePopupButton = document.getElementById("close-popup");
 
-            closePopupButton.addEventListener("click", function () {
-                popupContainer.style.display = "none";
-            });
+      document.querySelectorAll('.open-popup').forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          popupContainer.style.display = "flex";
         });
-    </script>
+      });
 
-    <script type="text/javascript">
-        // Your phone number (with country code) and the message you want to pre-fill
-        const phoneNumber = "0029Vb7MgnV2v1Iw950Wcg17";  // Replace with the phone number you want to send the message to
-        const message = "Hello";  // Replace with your custom message
-
-        // Encode the message to make it URL safe
-        const encodedMessage = encodeURIComponent(message);
-
-        // Create the WhatsApp link
-        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-        // Set the href attribute of the anchor tag
-        document.getElementById("whatsappLink").href = whatsappLink;
-    </script>
+      closePopupButton.addEventListener("click", () => {
+        popupContainer.style.display = "none";
+      });
+    });
+  </script>
 </body>
-  </html>
+</html>
