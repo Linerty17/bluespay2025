@@ -15,6 +15,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px;
         }
 
         .box {
@@ -32,6 +33,7 @@
         .firstc {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .circle {
@@ -81,6 +83,23 @@
             text-decoration: none;
             color: #007BFF;
         }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .circle {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle {
+                width: 100%;
+            }
+
+            .firstc {
+                flex-direction: column; /* Stack items vertically on small screens */
+            }
+        }
     </style>
 
     <meta charset="UTF-8">
@@ -93,7 +112,7 @@
 <body>
     <div class="top">
         <img src="images/ma.jpeg" alt="">
-        <img src="images/noti.jpeg" alt="" style="float: right; padding-left: 10px;">
+        <img src="images/noti.jpeg" alt="" style="padding-left: 10px;">
         <p>Hi, Valid user@!</p>
     </div> 
     <br><br><br><br>
@@ -181,17 +200,12 @@
     </script>
 
     <script type="text/javascript">
-        // Your phone number (with country code) and the message you want to pre-fill
-        const phoneNumber = "0029Vb7MgnV2v1Iw950Wcg17";  // Replace with the phone number you want to send the message to
-        const message = "Hello";  // Replace with your custom message
+        const phoneNumber = "0029Vb7MgnV2v1Iw950Wcg17"; 
+        const message = "Hello"; 
 
-        // Encode the message to make it URL safe
         const encodedMessage = encodeURIComponent(message);
-
-        // Create the WhatsApp link
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-        // Set the href attribute of the anchor tag
         document.getElementById("whatsappLink").href = whatsappLink;
     </script>
 </body>
